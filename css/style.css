@@ -1,0 +1,420 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+
+    /* colors */
+    --light-gray: #555555;
+    --secondary-color: #f4f4f4;
+
+    /* font styles */
+    --body-font: "Montserrat", sans-serif;
+    --heading-font: "REM", sans-serif;
+}
+
+/* Global */
+html {
+    min-height: 100%;
+    min-width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1rem;
+}
+
+header {
+    font-family: 'REM';
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--body-font);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--body-font);
+    color: var(--light-gray);
+}
+
+a:hover {
+    color: black;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    min-width: 100%;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--light-gray);
+    text-align: center;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+}
+
+nav img {
+    max-width: 4em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    float: none;
+}
+
+.logo a {
+    padding: 0;
+}
+
+.logo .name {
+    font-size: 2em;
+    color: black;
+    padding: 0;
+}
+
+
+.landing {
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 30vh;
+    padding-bottom: 45vh;
+}
+
+
+
+/* underline link effect */
+.un {
+    display: inline-block;
+    position: relative;
+}
+
+.un::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--light-gray);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.un:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.Montserrat {
+    font-family: 'Montserrat';
+}
+
+.REM {
+    font-family: 'REM';
+}
+
+.section-title {
+    font-size: 2rem;
+    min-width: 100vw;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--secondary-color);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.toggle-collapse {
+    display: none;
+}
+
+figure {
+    padding: 0;
+    margin: 2em;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+.projects figure {
+    max-width: 50vw;
+}
+
+.project-title {
+    font-size: 2rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.project-description {
+    max-width: 100%;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    word-wrap: break-word
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.title h1 {
+    font-size: 3.5rem;
+    padding: 0;
+    margin: 3.5rem 0;
+    width: 60vw;
+}
+
+.about-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 8rem;
+}
+
+.about-block div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vw;
+    margin: auto;
+    padding-top: 0;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-block p {
+    max-width: 50vw;
+    font-size: 1.4rem;
+    margin: 3rem 5rem;
+    line-height: 1.4;
+}
+
+.mypic {
+    max-height: 40vh;
+    border: 2px solid #000;
+    border-radius: 0.3em;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    display: flex;
+    width: 60vw;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.contact-icon {
+    width: 8rem;
+}
+
+.contact-content h2 {
+    font-size: 2rem;
+    margin-left: 4rem;
+}
+
+.image-box {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    border: 2px solid #000;
+    border-radius: 0.3em;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: 50em;
+    transition: all 0.3s;
+    display: block;
+    padding: 0;
+    transform: scale(1);
+    margin: 0;
+}
+
+.image-box:hover img {
+    transform: scale(1.05);
+}
+
+
+.project-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.project-block .container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding: 0;
+    margin: 0;
+}
+
+
+.project-block-img {
+    max-height: 60vh;
+    max-width: 100%;
+    border: 2px solid #000;
+    border-radius: 0.4em;
+}
+
+.project-block figure {
+    margin: 0;
+}
+
+.project-block figure figcaption p {
+    max-width: 20vw;
+    padding: 0;
+    margin: 1em 0 2em 0;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.project-block-text {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.project-block-text h2 {
+    display: block;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.project-block-text p {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-right: 0.5em;
+}
+
+.to-top {
+    border-radius: 5rem;
+    width: 10vw;
+    color: white;
+    background-color: #555555;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    margin-left: 20vw;
+    margin-bottom: 2rem;
+}
+
+.to-top:hover {
+    background-color: #000000;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    margin-bottom: 4em;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+footer {
+    display: flex;
+    border-top: 2px solid var(--light-gray);
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-link {
+    font-size: 1.25rem;
+}
+
+footer img {
+    height: 2em;
+    margin-top: 5px;
+}
+
+footer p {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-link+.footer-link {
+    margin-left: 2em;
+}
+
+.black {
+    color: #000;
+}
+
+
+
+
+/*fixes figcation overflowing*/
+figure {
+    display: table;
+}
+
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+}
