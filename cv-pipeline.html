@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven RAG Financial Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="icons/LogoNoBG.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=REM">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/animation.css" rel="stylesheet" />
+    <link href="css/mediaQueries.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="mobile-nav">
+                <div class="logo">
+                    <a href="index.html"><img src="icons/LogoWBG.svg"></a>
+                    <a class="REM name" href="index.html">Benson Chow</a>
+                </div>
+                <button class="toggle-collapse">
+                    <img src="icons/menu.svg" alt="menu icon">
+                </button>
+            </div>
+            <div class="navbar-collapse">
+                <div class="nav-links">
+                    <a class="REM nav-item" href="index.html">Home</a>
+                    <a class="REM nav-item" href="index.html#projects">Projects</a>
+                    <a class="REM nav-item" href="about.html">About</a>
+                    <a class="REM nav-item" href="about.html#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <span class="title">
+            <h1>YOLOv8 Object Detection Pipeline</h1>
+        </span>
+
+        <section class="project-block">
+            <div class="container">
+                
+                <div class="project-block-text">
+                    <h2>Problem Statement & Objective</h2>
+                    <p>
+                        Training a custom computer vision model to accurately detect and classify the ripeness stages of fruit in raw images.
+                    </p>
+                    <p>
+                        The objective was to configure, train, and evaluate an Ultralytics YOLOv8 object detection model on a custom dataset to categorize bananas into four distinct classes: unripe, ripe, overripe, and rotten.
+                    </p>
+                </div>
+
+                <figure>
+                    <img class="project-block-img" alt="Model Training" src="img/yolo-training.jpg">
+                    <figcaption>
+                        <p>Configuring the YOLOv8 architecture and custom dataset parameters</p>
+                    </figcaption>
+                </figure>
+
+                <div class="project-block-text">
+                    <h2>Architecture & Tech Stack</h2>
+                    <ul>
+                        <li><strong>Language:</strong> Python</li>
+                        <li><strong>Core Concepts:</strong> Computer Vision, Object Detection, Bounding Box Classification</li>
+                        <li><strong>Frameworks & Models:</strong> PyTorch, Ultralytics YOLOv8</li>
+                    </ul>
+                </div>
+
+                <figure>
+                    <img class="project-block-img" alt="YOLOv8 Output" src="img/yolo-output.jpg">
+                    <figcaption>
+                        <p>Final model inference displaying bounding boxes and confidence scores</p>
+                    </figcaption>
+                </figure>
+
+                <div class="project-block-text">
+                    <h2>Implementation Details</h2>
+                    <ul>
+                        <li><strong>Dataset Preparation:</strong> Processed and formatted a custom image dataset with annotated bounding boxes corresponding to the four ripeness classifications.</li>
+                        <li><strong>Model Training:</strong> Fine-tuned the pre-trained YOLOv8 model weights using PyTorch, optimizing hyperparameters to improve bounding box precision and recall.</li>
+                        <li><strong>Inference & Evaluation:</strong> Deployed the trained weights to run inference on test images, successfully generating accurate bounding boxes with high confidence scores for multi-class detection.</li>
+                    </ul>
+                </div>
+
+                <div class="project-block-text">
+                    <h2>Source Code</h2>
+                    <p>
+                        <a href="https://github.com/Bca72/NLP-Week2-Text-Generation" target="_blank" class="un">View the full Jupyter Notebook and code on GitHub &rarr;</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        
+        <button onclick="topFunction()" class="to-top">
+            <p>Back To Top</p>
+        </button>
+    </main>
+
+    <footer>
+        <p><a class="black" href="index.html">Benson Chow</a> 2026</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/benson-chow-83669b24a/" class="footer-link"><img
+                    src="icons/linkedin.svg"> </a>
+            <a href="https://github.com/Bca72" class="un footer-link">Github</a>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="js/myscripts.js"></script>
+</body>
+
+</html>
