@@ -53,10 +53,10 @@
                 <div class="project-block-text">
                     <h2>Problem Statement & Objective</h2>
                     <p>
-                        Designing a Retrieval-Augmented Generation (RAG) financial chatbot to summarize public opinions on financial topics[cite: 3]. 
+                        Designing a Retrieval-Augmented Generation (RAG) financial chatbot to summarize public opinions on financial topics. 
                     </p>
                     <p>
-                        The objective was to build a system capable of parsing and accurately retrieving context from Reddit discussions to help users understand market sentiment, while strictly preventing the AI from offering personalized financial advice[cite: 3, 4].
+                        The objective was to build a system capable of parsing and accurately retrieving context from Reddit discussions to help users understand market sentiment, while strictly preventing the AI from offering personalized financial advice.
                     </p>
                 </div>
 
@@ -71,9 +71,9 @@
                     <h2>Architecture & Tech Stack</h2>
                     <ul>
                         <li><strong>Language:</strong> Python</li>
-                        <li><strong>Models Evaluated:</strong> GPT-2, Llama-2-7B, Flan-T5 Base, Flan-T5 Large[cite: 3]</li>
-                        <li><strong>Final LLM:</strong> Flan-T5 Large (780M Parameters)[cite: 3]</li>
-                        <li><strong>Datasets:</strong> Hugging Face <code>emilpartow/reddit_comments_sp500</code>[cite: 4]</li>
+                        <li><strong>Models Evaluated:</strong> GPT-2, Llama-2-7B, Flan-T5 Base, Flan-T5 Large</li>
+                        <li><strong>Final LLM:</strong> Flan-T5 Large (780M Parameters)</li>
+                        <li><strong>Datasets:</strong> Hugging Face <code>emilpartow/reddit_comments_sp500</code></li>
                     </ul>
                 </div>
 
@@ -87,17 +87,17 @@
                 <div class="project-block-text">
                     <h2>Engineering Challenges & Solutions</h2>
                     <ul>
-                        <li><strong>Model Benchmarking:</strong> Evaluated four LLMs for summarization efficacy. Selected Flan-T5 Large as it delivered the strongest summarization performance, whereas Llama-2-7B suffered from prompt-echoing and GPT-2 was prone to hallucinations[cite: 3].</li>
-                        <li><strong>Context & Token Optimization:</strong> Prevented token overflow errors by migrating from a post-based dataset to a comment-based dataset, dynamically concatenating post titles with comments[cite: 4]. Tuned the retrieval <code>k-value</code> down to 3 to optimize context window limits[cite: 4].</li>
-                        <li><strong>Guardrails & Fallback Logic:</strong> Engineered system prompts with strict guardrails to prevent the generation of financial advice[cite: 4]. Implemented a baseline cosine similarity threshold of 0.4; queries retrieving context below this score automatically trigger a generic fallback response to prevent hallucinated answers[cite: 6].</li>
-                        <li><strong>Hyperparameter Tuning:</strong> Calibrated the generation pipeline to eliminate literal repetition by enabling sampling, setting temperature to 0.7, top-p to 0.9, and applying a repetition penalty of 1.3[cite: 5].</li>
+                        <li><strong>Model Benchmarking:</strong> Evaluated four LLMs for summarization efficacy. Selected Flan-T5 Large as it delivered the strongest summarization performance, whereas Llama-2-7B suffered from prompt-echoing and GPT-2 was prone to hallucinations.</li>
+                        <li><strong>Context & Token Optimization:</strong> Prevented token overflow errors by migrating from a post-based dataset to a comment-based dataset, dynamically concatenating post titles with comments. Tuned the retrieval <code>k-value</code> down to 3 to optimize context window limits.</li>
+                        <li><strong>Guardrails & Fallback Logic:</strong> Engineered system prompts with strict guardrails to prevent the generation of financial advice. Implemented a baseline cosine similarity threshold of 0.4; queries retrieving context below this score automatically trigger a generic fallback response to prevent hallucinated answers.</li>
+                        <li><strong>Hyperparameter Tuning:</strong> Calibrated the generation pipeline to eliminate literal repetition by enabling sampling, setting temperature to 0.7, top-p to 0.9, and applying a repetition penalty of 1.3.</li>
                     </ul>
                 </div>
 
                 <div class="project-block-text">
                     <h2>Source Code</h2>
                     <p>
-                        <a href="https://github.com/Bca72/NLP-Week2-Text-Generation/blob/main/Retrieval_Augmented_Generation_(RAG).ipynb" target="_blank" class="un">View the full Jupyter Notebook and code on GitHub &rarr;</a>
+                        <a href="https://github.com/Bca72/NLP-Week2-Text-Generation" target="_blank" class="un">View the full Jupyter Notebook and code on GitHub &rarr;</a>
                     </p>
                 </div>
 
